@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+header {
+    position: sticky;
+    background-color: aliceblue;
+    border-bottom: 1px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    padding: 4;
+
+}
+
+.user {
+    container-type: normal;
+    justify-self: flex-end;
+}
+
+label {
+    font:
+        1rem 'Fira Sans',
+        sans-serif;
+}
+
+
+input,
+label {
+    display: auto;
+    margin: auto;
+}
+
+figure {
+    border: thin #c0c0c0 solid;
+    container-type: normal;
+    padding: 5px;
+    max-width: 220px;
+    margin: auto;
+}

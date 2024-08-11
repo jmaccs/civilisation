@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
+</head>
+
+<body>
+    <header>
+        <section>
+            <div class="user">
+                <label for="name">whats your name:</label>
+                <input type="text" id="name" size="12" />
+            </div>
+            <figure>
+                <audio id="ambience" controls>
+                    <source src="ambience/02 Civilization IV - Baba Yetu.mp3" class="ambience" type="audio/mpeg">
+                    Your browser does not support the audio element.
+
+                </audio>
+                <h1>⬆️ click me ! </h1>
+            </figure>
+        </section>
+    </header>
+    <canvas id="myCanvas" style="display:none;"></canvas>
+    <script type="module" src="./script.js"></script>
+    <script type="module">
+        import init from './script.js'
+        window.user = 'freepalestine';
+        const input = document.querySelector("input");
+        input.addEventListener("input", function (e) {
+            if (e.target.value.length > 1) {
+                window.user = e.target.value;
+            } else {
+                window.user = 'freepalestine';
+            }
+
+        });
+        document.getElementById('ambience').addEventListener('play', init);
+    </script>
+
+
+</body>
+
+</html>
